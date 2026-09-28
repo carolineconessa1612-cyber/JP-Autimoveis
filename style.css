@@ -25,7 +25,7 @@ nav a:hover{color:#fff}
 .btn-outline{background:transparent;border-color:#fff}
 .btn-outline:hover{background:#fff;color:var(--blue)}
 .hero{height:650px;position:relative;display:flex;align-items:center;overflow:hidden;background:#071b40}
-.hero-image{position:absolute;inset:0;background-image:url('loja.jpg');background-size:cover;background-position:center 45%;filter:saturate(.9)}
+.hero-image{position:absolute;inset:0;background-image:url('tela de inicio original.jfif');background-size:cover;background-position:center 45%;filter:saturate(.9)}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(2,14,37,.9) 0%,rgba(2,14,37,.65) 42%,rgba(2,14,37,.2) 80%)}
 .hero-content{position:relative;color:#fff;padding-top:30px}
 .eyebrow{font-size:12px;letter-spacing:.2em;font-weight:800;color:#ffad69;margin:0 0 14px}
