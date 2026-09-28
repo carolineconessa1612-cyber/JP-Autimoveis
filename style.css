@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root{
+  --blue:#061b45;
+  --blue2:#0a2b67;
+  --orange:#ef7d24;
+  --silver:#e8edf5;
+  --text:#101828;
+  --muted:#667085;
+  --bg:#f5f7fa;
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--text);background:white}
+.container{width:min(1120px,92%);margin:auto}
+.topbar{position:sticky;top:0;z-index:20;background:rgba(4,19,49,.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.1)}
+.nav{height:76px;display:flex;align-items:center;gap:30px}
+.logo{color:#fff;text-decoration:none;font-weight:800;letter-spacing:.02em;font-size:19px;white-space:nowrap}
+.logo span{color:var(--orange);font-size:29px;margin-right:4px}
+nav{display:flex;gap:25px;margin-left:auto}
+nav a{color:#dce6f7;text-decoration:none;font-size:14px;font-weight:600}
+nav a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:8px;background:var(--orange);color:#fff;text-decoration:none;font-weight:700;border:1px solid var(--orange);transition:.2s}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.btn-small{padding:10px 15px;font-size:13px}
+.btn-outline{background:transparent;border-color:#fff}
+.btn-outline:hover{background:#fff;color:var(--blue)}
+.hero{height:650px;position:relative;display:flex;align-items:center;overflow:hidden;background:#071b40}
+.hero-image{position:absolute;inset:0;background-image:url('loja.jpg');background-size:cover;background-position:center 45%;filter:saturate(.9)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(2,14,37,.9) 0%,rgba(2,14,37,.65) 42%,rgba(2,14,37,.2) 80%)}
+.hero-content{position:relative;color:#fff;padding-top:30px}
+.eyebrow{font-size:12px;letter-spacing:.2em;font-weight:800;color:#ffad69;margin:0 0 14px}
+.eyebrow.dark{color:var(--orange)}
+h1{font-size:clamp(42px,6vw,76px);line-height:1.02;margin:0 0 22px;letter-spacing:-.04em}
+h1 strong{color:#ff9b4c}
+.hero-text{font-size:18px;line-height:1.6;max-width:530px;color:#e3e9f4}
+.hero-actions{display:flex;gap:12px;margin-top:28px}
+.section{padding:95px 0;background:var(--bg)}
+.section-heading{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:35px}
+h2{font-size:clamp(30px,4vw,46px);letter-spacing:-.035em;margin:0 0 12px}
+.section-heading>p{max-width:380px;color:var(--muted);line-height:1.6}
+.cars{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.car-card{background:#fff;border:1px solid #e6eaf0;border-radius:14px;overflow:hidden;box-shadow:0 8px 30px rgba(10,30,60,.06)}
+.car-placeholder{height:205px;background:linear-gradient(135deg,#dfe5ee,#aeb8c8);display:grid;place-items:center;color:#4c596d;font-weight:800;font-size:13px;letter-spacing:.08em}
+.car-info{padding:20px}
+.tag{display:inline-block;background:#fff1e6;color:#c55c0d;border-radius:999px;padding:6px 9px;font-size:11px;font-weight:800}
+.car-info h3{font-size:21px;margin:14px 0 8px}
+.details{color:var(--muted);font-size:13px}
+.car-bottom{display:flex;align-items:center;justify-content:space-between;margin-top:22px;padding-top:18px;border-top:1px solid #edf0f4}
+.car-bottom strong{font-size:18px}
+.car-bottom a{color:var(--blue2);font-size:12px;font-weight:800;text-decoration:none}
+.about{padding:100px 0}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about p:not(.eyebrow){color:var(--muted);line-height:1.8}
+.about-photo{border-radius:16px;overflow:hidden;box-shadow:0 18px 50px rgba(5,25,60,.15)}
+.about-photo img{display:block;width:100%;height:430px;object-fit:cover}
+.stats{display:flex;gap:35px;margin-top:30px}
+.stats div{display:flex;flex-direction:column}
+.stats strong{font-size:28px;color:var(--blue)}
+.stats span{font-size:12px;color:var(--muted);margin-top:4px}
+.contact{padding:30px 0 90px}
+.contact-box{background:linear-gradient(120deg,#061a42,#0b347b);color:#fff;border-radius:18px;padding:50px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+.contact-box h2{max-width:620px}
+.contact-box p:not(.eyebrow){color:#d7e0ef;line-height:1.6}
+.contact-actions{display:flex;gap:10px;flex-shrink:0}
+.whatsapp{background:#20b866;border-color:#20b866}
+.btn-outline-light{background:transparent;border-color:#dbe5f5}
+footer{background:#030f25;color:#aebbd0;padding:28px 0}
+.footer{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.footer p{font-size:12px;margin:0}
+@media(max-width:800px){
+  nav{display:none}.nav{justify-content:space-between}
+  .hero{height:600px}.hero-overlay{background:rgba(2,14,37,.68)}
+  .cars{grid-template-columns:1fr}.section-heading,.contact-box,.footer{flex-direction:column;align-items:flex-start}
+  .about-grid{grid-template-columns:1fr;gap:35px}.about-photo img{height:300px}
+  .contact-actions{width:100%}.contact-actions .btn{flex:1}
+}
